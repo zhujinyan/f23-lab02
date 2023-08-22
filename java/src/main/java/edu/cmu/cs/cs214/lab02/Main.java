@@ -1,14 +1,13 @@
 package edu.cmu.cs.cs214.lab02;
 
-import edu.cmu.cs.cs214.lab02.points.*;
+import edu.cmu.cs.cs214.lab02.shapes.Rectangle;
 
 public class Main {
     public static void main(String[] args) {
-        PolarPoint point1 = new PolarPoint(2, 0);
-        PolarPoint point2 = new PolarPoint(4, Math.PI);
+        Rectangle rectangle = new Rectangle(2, 3);
 
-        Line line = new Line(point1, point2);
+        Renderer renderer = new Renderer(rectangle);
 
-        line.draw();
+        renderer.draw();
     }
 }
