@@ -1,9 +1,6 @@
-import { newLine } from "./line.js";
-import { PolarPoint, newPolarPoint } from "./points/polarpoint.js";
+import { newRenderer } from "./renderer.js"
+import { Rectangle, newRectangle } from "./shapes/rectangle.js";
 
-const point1: PolarPoint = newPolarPoint(2, 0);
-const point2: PolarPoint = newPolarPoint(4, Math.PI);
-
-const line = newLine(point1, point2);
-
-line.draw();
+const rectangle: Rectangle = newRectangle(2, 3)
+const renderer = newRenderer(rectangle)
+renderer.draw();
